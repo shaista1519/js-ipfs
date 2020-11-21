@@ -18,7 +18,7 @@ module.exports = function grpcId (grpc, service, opts = {}) {
 
     return {
       ...res,
-      addresses: res.addresses.map(multiaddr)
+      addresses: (res.addresses || []).map(multiaddr)
     }
   }
 
